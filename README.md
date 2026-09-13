@@ -29,9 +29,7 @@ The actual application is hosted within the Salesforce environment.
 
 ![Data Model](screenshots/data-model.png)
 
-Account (Company) is linked to Job Position, which is linked to Application; Application is also linked to Candidate, and Interview is linked to Application.
-
-The data model connects companies, job positions, applications, candidates, and interviews into a structured recruitment workflow.
+Account (Company) → Job Position → Application, with Application linked to Candidate and Interview linked to Application.
 
 ## Lightning Application
 
@@ -75,7 +73,7 @@ Candidate Placement Flow
 Interview Notification Flow
 - Trigger Object: Interview
 - Entry Condition: Interview Status = Scheduled
-- Action: Sends an email notification to the Candidate's email address
+- Action: Sends an email notification to the candidate's email address.
 
 Both automations were tested successfully through the complete application workflow.
 
