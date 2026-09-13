@@ -21,6 +21,8 @@ This project implements a complete recruitment workflow using Salesforce standar
 
 ![Data Model](screenshots/data-model.png)
 
+Account (Company) is linked to Job Position, which is linked to Application; Application is also linked to Candidate, and Interview is linked to Application.
+
 The data model connects companies, job positions, applications, candidates, and interviews into a structured recruitment workflow.
 
 ## Lightning Application
@@ -55,9 +57,19 @@ A record-triggered Flow sends an email notification when an interview is schedul
 
 ## Recruitment Automation
 
-When an application status changes to `Selected`, a record-triggered Flow automatically updates the related candidate status to `Placed`.
+The system uses two record-triggered Flows to automate key recruitment steps:
 
-The automation was tested successfully through the complete application workflow.
+Candidate Placement Flow
+- Trigger Object: Application
+- Entry Condition: Application Status = Selected
+- Action: Updates the related Candidate record so that Candidate Status = Placed
+
+Interview Notification Flow
+- Trigger Object: Interview
+- Entry Condition: Interview Status = Scheduled
+- Action: Sends an email notification to the Candidate's email address
+
+Both automations were tested successfully through the complete application workflow.
 
 ## Validation Rules
 
@@ -131,6 +143,10 @@ The dashboard provides a visual overview of applications, candidates, and job po
 **Platform:** Salesforce
 
 **Features:** Lightning Experience, Custom Objects, Validation Rules, Record-Triggered Flows, Email Automation, Reports, Dashboards
+
+## Review
+
+This project was developed and tested in a Salesforce Trailhead Playground. The repository contains screenshots documenting the configured objects and relationships, the automation flows, validation rules, reports, dashboard, and the end-to-end testing carried out on the system.
 
 ## Future Enhancements
 
