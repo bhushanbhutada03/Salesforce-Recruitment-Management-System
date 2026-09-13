@@ -6,6 +6,14 @@ A Salesforce-based recruitment management system for managing companies, job pos
 
 This project implements a complete recruitment workflow using Salesforce standard and custom objects, lookup relationships, validation rules, record-triggered flows, email automation, reports, and dashboards.
 
+## Project Environment
+
+The application was built and tested in a Salesforce Trailhead Playground using Salesforce Lightning Experience.
+
+The GitHub repository serves as the project documentation and portfolio showcase. It contains the system design, configuration details, implementation screenshots, automation logic, validation rules, reports, dashboard, and end-to-end testing evidence.
+
+The actual application is hosted within the Salesforce environment.
+
 ## Key Features
 
 - Company and job position management
@@ -143,10 +151,6 @@ The dashboard provides a visual overview of applications, candidates, and job po
 **Platform:** Salesforce
 
 **Features:** Lightning Experience, Custom Objects, Validation Rules, Record-Triggered Flows, Email Automation, Reports, Dashboards
-
-## Review
-
-This project was developed and tested in a Salesforce Trailhead Playground. The repository contains screenshots documenting the configured objects and relationships, the automation flows, validation rules, reports, dashboard, and the end-to-end testing carried out on the system.
 
 ## Future Enhancements
 
